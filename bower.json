@@ -1,0 +1,30 @@
+{
+  "name": "openslack-html5",
+  "version": "1.0.0",
+  "authors": [
+    "openslack <admin@openslack.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "openslack/static/bower_components",
+    "test",
+    "tests",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "jquery": "~2.1.4",
+    "react": "~0.14.0",
+    "foundation": "~5.5.3"
+  },
+  "homepage": "https://github.com/openslack/openslack-html5",
+  "description": "move your thing like it ain't no thang",
+  "main": "html5.py",
+  "moduleType": [],
+  "keywords": [
+    "space",
+    "share"
+  ],
+}
