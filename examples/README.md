@@ -1,45 +1,62 @@
-# openslack
+# Amaze UI Touch Starter Kit
 
-启动命令：webpack-dev-server --progress --colors
+[Amaze UI Touch](https://github.com/amazeui/amazeui-touch) 快速上手套件，基于 React、Amaze UI Touch、React Router 及 Gulp 开发 SPA。
 
-export default 可以类比成 C# 里面的 public 关键字，这样才能在别的类中调用；可以省略，表示只在当前文件可见，相当于添加了 private 关键字。
+https://habrastorage.org/getpro/habr/post_images/d8b/95e/fa0/d8b95efa08914d57f74f173a11ee0623.png
 
-react Ordering(顺序)
+**Redux框架**
+http://www.cnblogs.com/Leo_wl/p/4780750.html
 
-React.Component子类
-constructor
-optional static methods
-getChildContext
-componentWillMount
-componentDidMount
-componentWillReceiveProps
-shouldComponentUpdate
-componentWillUpdate
-componentDidUpdate
-    10. componentWillUnmount
-    11. clickHandlers or eventHandlers like onClickSubmit() or onChangeDescription()
-    12. getter methods for render like getSelectReason() or getFooterContent()
-    13. Optional render methods like renderNavigation() or renderProfilePicture()
-    14. render
-React.createClass
-displayName
-propTypes
-contextTypes
-childContextTypes
-mixins
-statics
-defaultProps
-getDefaultProps
-getInitialState
-    10. getChildContext
-    11. componentWillMount
-    12. componentDidMount
-    13. componentWillReceiveProps
-    14. shouldComponentUpdate
-    15. componentWillUpdate
-    16. componentDidUpdate
-    17. componentWillUnmount
-    18. clickHandlers or eventHandlers like onClickSubmit() or onChangeDescription()
-    19. getter methods for render like getSelectReason() or getFooterContent()
-    20. Optional render methods like renderNavigation() or renderProfilePicture()
-    21. render
+## 目录结构
+
+项目文件放在 `app` 目录下：
+
+```
+.app
+├── humans.txt
+├── i              // 图片
+├── index.html     // 入口 HTML
+├── js             // JS
+├── style           // 样式文件（编译任务中设置的是 Sass，可以自行改用其他）
+├── manifest.json
+├── manifest.webapp
+└── robots.txt
+```
+
+## 使用说明
+
+### 环境配置
+
+- 安装 [Node.js](https://nodejs.org/en/download/)
+- 模块编译环境配置：[点击查看](https://github.com/nodejs/node-gyp#installation)
+
+### 全局安装 gulp：
+
+```
+npm install gulp -g
+```
+
+### 安装开发依赖
+
+1. 克隆或下载本项目代码；
+2. 进入项目目录，执行 `npm install`；
+
+### 开发
+
+```
+gulp
+```
+
+或者
+
+```
+npm start
+```
+
+### 生产环境构建
+
+设置 Node 环境变量为 `production` 后，HTML 中引用的 CSS 和 JS 会替换为 minify 的版本。
+
+```
+npm run build
+```

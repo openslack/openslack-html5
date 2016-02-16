@@ -13,7 +13,7 @@ import NotFound from './NotFound';
 
 const pages = {
   Page1,
-  Page2,
+  Page2
 };
 
 const Page = React.createClass({
@@ -30,8 +30,8 @@ const Page = React.createClass({
       icon: 'left-nav',
       title: '返回',
       props: {
-        to: '/',
-      },
+        to: '/'
+      }
     };
 
     return (
@@ -44,7 +44,7 @@ const Page = React.createClass({
         <Component scrollable />
       </View>
     );
-  },
+  }
 });
 
 export default Page;

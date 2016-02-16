@@ -14,7 +14,7 @@ const Page1 = React.createClass({
         </Group>
       </Container>
     );
-  },
+  }
 });
 
 export default Page1;

@@ -3,6 +3,7 @@
  */
 
 import gulp from  'gulp';
+import stripDebug from "gulp-strip-debug";
 import gulpLoadPlugins from  'gulp-load-plugins';
 import del from  'del';
 import runSequence from  'run-sequence';
@@ -36,8 +37,8 @@ const paths = {
 // JavaScript 格式校验
 gulp.task('jshint', () => {
   return gulp.src('app/js/**/*.js')
-    .pipe($.eslint())
-    .pipe($.eslint.format());
+    .pipe($.eslint());
+    //.pipe($.eslint.format());
     // .pipe($.eslint.failOnError());
 });
 
@@ -108,10 +109,13 @@ gulp.task('js', () => {
           {
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel'
+            loader: 'babel-loader',
+            query: {
+              presets: ['es2015', 'react']
+            }
           }
         ]
-      },
+      }
     }))
     .pipe(gulp.dest(paths.dist.js))
     .pipe($.size({title: 'script'}));
@@ -135,6 +139,15 @@ gulp.task('html', () => {
 
 // 洗刷刷
 gulp.task('clean', () => {
+	//var vp=vinylPaths();
+    //
+     //gulp.src('1.js')
+	// .pipe(vp)
+    //.pipe(stripDebug())
+    //.pipe(gulp.dest('dist'))
+	//.on('end',function(){
+	//	del(vp.paths);
+	//})
   return del(['dist/*', '!dist/.git'], {dot: true});
 });
 

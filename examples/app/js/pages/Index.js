@@ -40,7 +40,7 @@ const Index = React.createClass({
       <View>
         <NavBar
           amStyle="primary"
-          title="AMT Starter Kit"
+          title="看板"
         />
         <Container scrollable>
           <Group
