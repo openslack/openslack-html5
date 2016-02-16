@@ -21,6 +21,7 @@ const Index = React.createClass({
     const pages = [
       'Page1',
       'Page2',
+      'About',
     ];
 
     return pages.map((item, index) => {
@@ -44,7 +45,7 @@ const Index = React.createClass({
         />
         <Container scrollable>
           <Group
-            header="Welcome to AMT."
+            header="监控工具集"
             noPadded
           >
             <List>

@@ -10,8 +10,16 @@ import {
 } from 'react-router';
 import {
   Container,
+  Group,
+  NavBar,
   TabBar,
+  View,
 } from 'amazeui-touch';
+
+
+// Pages
+import Index from './pages/Index';
+import Page from './pages/Page';
 
 const App = React.createClass({
   render() {
@@ -19,6 +27,7 @@ const App = React.createClass({
       location,
       params,
       children,
+      ...props
       } = this.props;
     const transition = children.props.transition || 'sfr';
 
@@ -44,7 +53,7 @@ const App = React.createClass({
             component={Link}
             icon="gear"
             title=""
-            //badge="404"
+            badge="404"
             selected={params.page === 'system'}
             to="/system"
           />
@@ -59,8 +68,8 @@ const App = React.createClass({
             component={Link}
             icon="person"
             title=""
-            selected={params.page === 'person'}
-            to="/person"
+            selected={params.page === 'about'}
+            to="/about"
           />
         </TabBar>
       </Container>
@@ -68,17 +77,16 @@ const App = React.createClass({
   }
 });
 
-// Pages
-import Index from './pages/Index';
-import Page from './pages/Page';
-
 const routes = (
   <Router>
     <Route path="/" component={App}>
       <IndexRoute component={Index} />
-      <Route path=":system" component={Page} />
-      <Route path=":dashboard" component={Page} />
-      <Route path=":person" component={Page} />
+      <Route path=":page" component={Page} />
+      <Route path="/page1" component={Page} />
+      <Route path="/page2" component={Page} />
+      <Route path="/system" component={Page} />
+      <Route path="/dashboard" component={Page} />
+
     </Route>
   </Router>
 );

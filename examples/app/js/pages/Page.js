@@ -9,11 +9,13 @@ import {
 
 import Page1 from './Page1';
 import Page2 from './Page2';
+import About from './About';
 import NotFound from './NotFound';
 
 const pages = {
   Page1,
-  Page2
+  Page2,
+  About
 };
 
 const Page = React.createClass({
