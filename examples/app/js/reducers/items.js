@@ -5,7 +5,7 @@ import { ADD_ITEM, DELETE_ITEM, DELETE_ALL } from '../constants/actionTypes';
 
 const initialItems = Immutable.List([1,2,3]);
 
-export default function items(state = initialItems, action) {
+export default function items(state = initialItems, action=null) {
     switch(action.type) {
         case ADD_ITEM:
             return state.push( state.size !=0 ? state.get(-1)+1 : 1 );

@@ -9,6 +9,12 @@ export default keyMirror({
     FILTER_ITEM: null
 });
 
+export const ADD_TO_CART = 'ADD_TO_CART'
+export const CHECKOUT_REQUEST = 'CHECKOUT_REQUEST'
+export const CHECKOUT_SUCCESS = 'CHECKOUT_SUCCESS'
+export const CHECKOUT_FAILURE = 'CHECKOUT_FAILURE'
+export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS'
+
 // 等于
 // export const ADD_ITEM = 'ADD_ITEM';
 // export const DELETE_ITEM = 'DELETE_ITEM';
